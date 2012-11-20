@@ -1,0 +1,82 @@
+[General]
+site=http://ru.forismatic.com/
+viewSize=@Size(1270 964)
+viewScroll=@Point(419 365)
+U-A="Mozilla/5.0 (Windows; U; Windows NT 5.1; ru_RU; rv:1.9.1) Gecko/20090624 Firefox/3.5"
+used=true
+periodValue=15
+periodUnits=1
+replayTypeHttp=false
+
+[message]
+enhanced=true
+title=ru.forismatic.com [site]
+ttl=60
+w=635
+h=255
+location=@Point(646 256)
+colorR=255
+colorG=255
+colorB=220
+opacity=25
+backShown=false
+refreshShown=false
+forwardShown=false
+titleShown=true
+stickShown=false
+viewmodeShown=false
+closeShown=false
+z-index-mode=1
+type=0
+lengthLimit=true
+length=255
+noWordWrap=true
+
+[showPolicy]
+SPRXPattern=
+SPRXCaseSensetive=1
+SPRXMinimal=false
+SPRXUsed=false
+SPRXShowChanged=true
+nodes\size=0
+frameNodes\size=0
+TrackChanges=
+ChangesMarker=#ffff00
+
+[rules]
+size=0
+
+[UserActionsPages]
+1\UserActions\1\type=2
+1\UserActions\1\pos=@Point(486 583)
+1\UserActions\1\button=1
+1\UserActions\1\buttons=1
+1\UserActions\1\modifiers=0
+1\UserActions\1\delay=25
+1\UserActions\1\sz=@Size(1270 964)
+1\UserActions\2\type=3
+1\UserActions\2\pos=@Point(486 583)
+1\UserActions\2\button=1
+1\UserActions\2\buttons=0
+1\UserActions\2\modifiers=0
+1\UserActions\2\delay=25
+1\UserActions\2\sz=@Size(1270 964)
+1\UserActions\3\type=2
+1\UserActions\3\pos=@Point(349 435)
+1\UserActions\3\button=1
+1\UserActions\3\buttons=1
+1\UserActions\3\modifiers=0
+1\UserActions\3\delay=25
+1\UserActions\3\sz=@Size(1270 964)
+1\UserActions\4\type=3
+1\UserActions\4\pos=@Point(349 435)
+1\UserActions\4\button=1
+1\UserActions\4\buttons=0
+1\UserActions\4\modifiers=0
+1\UserActions\4\delay=25
+1\UserActions\4\sz=@Size(1270 964)
+1\UserActions\size=4
+size=1
+
+[requests]
+size=0

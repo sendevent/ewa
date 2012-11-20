@@ -1,0 +1,54 @@
+[General]
+site="http://api.forismatic.com/api/1.0/?method=getQuote&key=012345&format=html&lang=en"
+viewSize=@Size(320 966)
+viewScroll=@Point(0 0)
+U-A="Mozilla/5.0 (Windows; U; Windows NT 5.1; ru_RU; rv:1.9.1) Gecko/20090624 Firefox/3.5"
+used=true
+periodValue=15
+periodUnits=1
+replayTypeHttp=true
+
+[message]
+enhanced=true
+title=en.forismatic.com [widget]
+ttl=60
+w=320
+h=188
+location=@Point(0 0)
+colorR=255
+colorG=255
+colorB=220
+opacity=25
+backShown=false
+refreshShown=false
+forwardShown=false
+titleShown=true
+stickShown=false
+viewmodeShown=false
+closeShown=false
+z-index-mode=1
+type=0
+lengthLimit=false
+length=255
+noWordWrap=true
+
+[showPolicy]
+SPRXPattern=
+SPRXCaseSensetive=1
+SPRXMinimal=false
+SPRXUsed=false
+SPRXShowChanged=true
+nodes\size=0
+frameNodes\size=0
+TrackChanges=
+ChangesMarker=#ffff00
+
+[rules]
+size=0
+
+[UserActionsPages]
+1\UserActions\size=0
+size=1
+
+[requests]
+size=0
