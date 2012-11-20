@@ -1,0 +1,83 @@
+[General]
+site=http://en.forismatic.com/
+viewSize=@Size(1270 964)
+viewScroll=@Point(419 365)
+U-A="Mozilla/5.0 (Windows; U; Windows NT 5.1; ru_RU; rv:1.9.1) Gecko/20090624 Firefox/3.5"
+used=true
+periodValue=15
+periodUnits=1
+replayTypeHttp=false
+
+[message]
+enhanced=true
+title=en.forismatic.com [site]
+ttl=60
+w=635
+h=255
+location=@Point(646 0)
+favicon="@ByteArray(\x89PNG\r\n\x1a\n\0\0\0\rIHDR\0\0\0\x10\0\0\0\x10\b\x2\0\0\0\x90\x91h6\0\0\0\tpHYs\0\0\xf\x12\0\0\xe\xc4\x1\xf7;\xfa\x9d\0\0\x1\x82IDAT(\x91\x8d\x92\xbbJ\x3Q\x10\x86g\xce^\x92l\xcc=Q\x12o\xa0\xe0\x5\x84\xa0\x85VZ\b*\xa8X\xf8\0\xd6\xe2\x33\xf8\x4\x82\xad>\x80}J\xc5R\xec\x15%\x82\x4-\x4/$a\x93\x18\xb3\x9e\xdd\x9c\xb3\xe7Xx\xc3l\x16\x9cv\xfeo\xe6\xff\x87\xc1\xf9\x33\x13|JJ)\xa8%8C$$h\x10M\x3\0\xd5O-8\xe3\xaf\xb5\xd5\xc1\xe8\x62\x7f\xa2\x42\xd9\xfeu\x19\x92}\0@\xfc\0\xb7\xd5\xdc\x9d\xc9\xce\xf6\xf6\xdc\x37\x9d\xa5\x81\x98N\x88\x94\xc2w\x83k\xbf\xcf\xa5\x2\xeb\xc3\xf1\x8d\x93R\x95\xe1\xe1M\x95\x84\f\x15Iw\x80\xb7\x9a\xc2\xa1k\x93\xb9R\xc3\xaeP\x17u]Kf\x90|y\xe9\xb4$]7\xa7\xb0\xc2\xf2\xe8\x42.2\x1c\xd1\v+\xa3\xd3QEr\xf6#\xf0\x64 \xf8\xd4\xc6\x9d\xf3\x87\x80\x42\xf6._6O\xef.\x1b\fU\xed\xa7\xdfi\t\x91\x90@p*\xe\0peR-\x91\x41\x45\xf9\x33\xd0\x9b\x41r\x9eO\x19\xa6\xcd\x1f-\xd6\xa1\xf6\x1X;\x9f\n\x15k\x14u\xdd\xdb\xf5\x84\x16\"\b\xeeX<tQ\xb5\x88\xfa\x1f\x80\xb3|\xca\0\x80\x62\x9d\xa2\xda\xe5\xe8\xbf\x80pln\xbd\t\x9b\xe6\xd3\x86i\xf3\xdb\x86\x8d\x9a\xe6\v\x88\xb6\x33\x4t{$\xacrge0vP,\xcb\x80\x81\xd8%\xa1\xfa\xed\x84O\xa4\x83[\xe3\xe9\x85l\xe4\xa8\x64\x1e?[j,\xe9U\x3\0~\xbe\xb7\x14\x82\x37\xebQ\"Z\\H=\xa4\x84{\xba\x8e\a\x80\xf~{\x9b\x1b\x14>\x1di\0\0\0\0IEND\xae\x42`\x82)"
+colorR=255
+colorG=255
+colorB=220
+opacity=25
+backShown=false
+refreshShown=false
+forwardShown=false
+titleShown=true
+stickShown=false
+viewmodeShown=false
+closeShown=false
+z-index-mode=1
+type=0
+lengthLimit=true
+length=255
+noWordWrap=true
+
+[showPolicy]
+SPRXPattern=
+SPRXCaseSensetive=1
+SPRXMinimal=false
+SPRXUsed=false
+SPRXShowChanged=true
+nodes\size=0
+frameNodes\size=0
+TrackChanges=
+ChangesMarker=#ffff00
+
+[rules]
+size=0
+
+[UserActionsPages]
+1\UserActions\1\type=2
+1\UserActions\1\pos=@Point(528 574)
+1\UserActions\1\button=1
+1\UserActions\1\buttons=1
+1\UserActions\1\modifiers=0
+1\UserActions\1\delay=25
+1\UserActions\1\sz=@Size(1270 964)
+1\UserActions\2\type=3
+1\UserActions\2\pos=@Point(528 574)
+1\UserActions\2\button=1
+1\UserActions\2\buttons=0
+1\UserActions\2\modifiers=0
+1\UserActions\2\delay=25
+1\UserActions\2\sz=@Size(1270 964)
+1\UserActions\3\type=2
+1\UserActions\3\pos=@Point(352 437)
+1\UserActions\3\button=1
+1\UserActions\3\buttons=1
+1\UserActions\3\modifiers=0
+1\UserActions\3\delay=25
+1\UserActions\3\sz=@Size(1270 964)
+1\UserActions\4\type=3
+1\UserActions\4\pos=@Point(352 437)
+1\UserActions\4\button=1
+1\UserActions\4\buttons=0
+1\UserActions\4\modifiers=0
+1\UserActions\4\delay=25
+1\UserActions\4\sz=@Size(1270 964)
+1\UserActions\size=4
+size=1
+
+[requests]
+size=0

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body>
+Here you need to create RegExp. About sysntax and using you can read in <a href = http://doc.trolltech.com/4.5/qregexp.html>Qt's documentation page</a>.
+<br>With regexp you can describe what part of web page you need.
+<br>
+<br>Example Page html source:
+<font color=#0000ff><br>&lt;html&gt;</font>
+    <font color=#0000ff><br>&lt;head&gt;</font>
+        <font color=#0000ff><br>&lt;title&gt;</font>Exmaple page title<font color=#0000ff>&lt;/title&gt;</font>
+    <font color=#0000ff><br>&lt;/head&gt;</font>
+    <font color=#0000ff><br>&lt;body&gt;<br></font>
+        <font color=#0000ff>&lt;b&gt;</font>Target<font color=#0000ff>&lt;/b&gt;</font> content
+    <font color=#0000ff><br>&lt;/body&gt;</font>
+<font color=#0000ff><br>&lt;/html&gt;</font>
+<br>To match page's title, you can use regexp like this:
+<br>"Pattern": &lt;title&gt;(.*)&lt;/title&gt;
+<br>"Case sensetive" checkbox - unchecked
+<br>"Minimal" checkbox - checked.
+<br>"Replace with" - some text, wich'll replace matched value. 
+<br>If you'll leave "Replace with" empty, after processing result page wil be without title;
+<br>If you'll input in "Replace with" text "NEWTITLE" ( without quotes ), after processing result page's title will be "NEWTITLE";
+<br>If you'll input in "Replace with" text "% is changed" ( without quotes ), after processing result page's title will be "Exmaple page title is changed";
+</body>
+</html>

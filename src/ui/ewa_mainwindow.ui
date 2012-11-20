@@ -1,0 +1,1174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EWAMainWindowUi</class>
+ <widget class="QMainWindow" name="EWAMainWindowUi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>495</width>
+    <height>286</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="206">
+        <red>0</red>
+        <green>92</green>
+        <blue>162</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="HighlightedText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="206">
+        <red>0</red>
+        <green>92</green>
+        <blue>162</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="HighlightedText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>178</red>
+        <green>180</green>
+        <blue>191</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="HighlightedText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextBesideIcon</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="pTopStackedWidget">
+      <property name="minimumSize">
+       <size>
+        <width>120</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="pSitesListPageMain">
+       <layout class="QGridLayout" name="gridLayout_10">
+        <property name="margin">
+         <number>2</number>
+        </property>
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QSplitter" name="splitter_2">
+          <property name="lineWidth">
+           <number>1</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="handleWidth">
+           <number>2</number>
+          </property>
+          <widget class="QListWidget" name="pSitesListWidget">
+           <property name="minimumSize">
+            <size>
+             <width>120</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>120</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::NoContextMenu</enum>
+           </property>
+           <property name="lineWidth">
+            <number>0</number>
+           </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="showDropIndicator" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="currentRow">
+            <number>0</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>Sites List</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/images/documents.png</normaloff>:/images/documents.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Download type</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/images/dldtype.png</normaloff>:/images/dldtype.png</iconset>
+            </property>
+           </item>
+          </widget>
+          <widget class="QStackedWidget" name="pSitesListStackedWidget">
+           <property name="frameShape">
+            <enum>QFrame::Panel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="pSitesListPage">
+            <layout class="QGridLayout" name="gridLayout_9">
+             <property name="margin">
+              <number>0</number>
+             </property>
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item row="0" column="0">
+              <layout class="QVBoxLayout" name="pSitesListManagerLayout">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_9">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="margin">
+                  <number>6</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_10">
+                   <property name="text">
+                    <string>File:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="listFileNameLineEdit">
+                   <property name="toolTip">
+                    <string>Sites list file name</string>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="openTargetsListButton">
+                   <property name="maximumSize">
+                    <size>
+                     <width>22</width>
+                     <height>22</height>
+                    </size>
+                   </property>
+                   <property name="toolTip">
+                    <string>Open existing Sites List file or create new one</string>
+                   </property>
+                   <property name="text">
+                    <string>...</string>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normaloff>:/images/open.png</normaloff>:/images/open.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="pDownloadTypePage">
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="0" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_8">
+               <item>
+                <widget class="QRadioButton" name="parallelRadioButton">
+                 <property name="toolTip">
+                  <string>Download sites &quot;independently&quot;</string>
+                 </property>
+                 <property name="text">
+                  <string>Simultaneously</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="seriallyRadioButton">
+                 <property name="toolTip">
+                  <string>Download sites &quot;next after previous&quot;</string>
+                 </property>
+                 <property name="text">
+                  <string>Serially</string>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_5">
+               <property name="text">
+                <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Each site in list have checking interval, for example 15 minutes.&lt;br /&gt;In &quot;&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;Simultaneously&quot;&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; mode downloading of site will occur &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600; font-style:italic;&quot;&gt;every&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; 15 minutes;&lt;br /&gt;&quot;&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;Serially&quot;&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; mode means that current site will be downloaded &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600; font-style:italic;&quot;&gt;after&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; 15 minutes of previous site has been downloaded.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <spacer name="verticalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>107</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pOptionsPage">
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <property name="margin">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QListWidget" name="pOptionsListWidget">
+          <property name="minimumSize">
+           <size>
+            <width>120</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>120</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::NoContextMenu</enum>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="showDropIndicator" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>24</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="resizeMode">
+           <enum>QListView::Adjust</enum>
+          </property>
+          <property name="layoutMode">
+           <enum>QListView::SinglePass</enum>
+          </property>
+          <property name="viewMode">
+           <enum>QListView::ListMode</enum>
+          </property>
+          <property name="currentRow">
+           <number>0</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>Preferences</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/images/preferences.png</normaloff>:/images/preferences.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>System tray</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/images/systray.png</normaloff>:/images/systray.png</iconset>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QStackedWidget" name="pOptionsStackedWidget">
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="pBehaviorPage">
+           <layout class="QGridLayout" name="gridLayout_8">
+            <item row="0" column="0">
+             <layout class="QGridLayout" name="gridLayout_7">
+              <item row="2" column="0">
+               <widget class="QCheckBox" name="insertInClipboardCheckBox">
+                <property name="toolTip">
+                 <string>Put recived message to clippboard
+( previous clipboard value can be lost )</string>
+                </property>
+                <property name="text">
+                 <string>Copy last message to clipboard</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QCheckBox" name="needLogLastMsgCheckBox">
+                <property name="toolTip">
+                 <string>Save recived messages to /path/2/ewa/ewa.log </string>
+                </property>
+                <property name="text">
+                 <string>Save messages to log</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QCheckBox" name="closeMsgCheckBox">
+                <property name="toolTip">
+                 <string>Show warn when main application window closed.</string>
+                </property>
+                <property name="text">
+                 <string>Warn on close</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <layout class="QFormLayout" name="formLayout">
+                <property name="fieldGrowthPolicy">
+                 <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                </property>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label">
+                  <property name="text">
+                   <string>Language:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QComboBox" name="langComboBox"/>
+                </item>
+               </layout>
+              </item>
+              <item row="1" column="0">
+               <widget class="QCheckBox" name="pUpdatesCheckBox">
+                <property name="toolTip">
+                 <string>EWA will check for updates every hour since it has been launched.
+If newer version is available you'll see a widget with the notification.
+In order not to intrude, the widget will be shown only once for every new version.
+If you think that you've missed message - just recheck this.</string>
+                </property>
+                <property name="text">
+                 <string>Check for updates</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QCheckBox" name="autoconnectCheckBox">
+                <property name="toolTip">
+                 <string>Begin download sites on application start</string>
+                </property>
+                <property name="text">
+                 <string>Start download automatically</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0">
+             <spacer name="verticalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="pSysTrayPage">
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="2" column="0">
+             <spacer name="verticalSpacerSystray">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="1" column="0">
+             <widget class="QGroupBox" name="toolTipGroupBox">
+              <property name="toolTip">
+               <string>Show tooltip for systray entry</string>
+              </property>
+              <property name="title">
+               <string>Tooltip</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout">
+                 <item>
+                  <widget class="QLabel" name="label_11">
+                   <property name="text">
+                    <string>Text:</string>
+                   </property>
+                   <property name="buddy">
+                    <cstring>tooltipLineEdit</cstring>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="tooltipLineEdit">
+                   <property name="toolTip">
+                    <string>Shown text</string>
+                   </property>
+                   <property name="text">
+                    <string notr="true"/>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QGroupBox" name="groupBox">
+              <property name="title">
+               <string>App Icon</string>
+              </property>
+              <layout class="QGridLayout" name="_3">
+               <item row="0" column="0">
+                <widget class="QLabel" name="iconLabel">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>24</width>
+                   <height>24</height>
+                  </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Current icon image</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <layout class="QHBoxLayout" name="_4">
+                 <item>
+                  <spacer>
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="iconPushButton">
+                   <property name="maximumSize">
+                    <size>
+                     <width>22</width>
+                     <height>22</height>
+                    </size>
+                   </property>
+                   <property name="toolTip">
+                    <string>Load icon image from file</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normaloff>:/images/open.png</normaloff>:/images/open.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="clearIconButton">
+                   <property name="maximumSize">
+                    <size>
+                     <width>22</width>
+                     <height>22</height>
+                    </size>
+                   </property>
+                   <property name="toolTip">
+                    <string>Reset icon image to default</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normaloff>:/images/close.png</normaloff>:/images/close.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pConnectionPage">
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <property name="margin">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QListWidget" name="pConnectionListWidget">
+          <property name="minimumSize">
+           <size>
+            <width>120</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>120</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::NoContextMenu</enum>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="showDropIndicator" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>24</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="resizeMode">
+           <enum>QListView::Adjust</enum>
+          </property>
+          <property name="layoutMode">
+           <enum>QListView::SinglePass</enum>
+          </property>
+          <property name="viewMode">
+           <enum>QListView::ListMode</enum>
+          </property>
+          <property name="currentRow">
+           <number>0</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>WebKit</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/images/webkit.png</normaloff>:/images/webkit.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Proxy</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/images/proxy.png</normaloff>:/images/proxy.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Cache</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/images/cache.png</normaloff>:/images/cache.png</iconset>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QStackedWidget" name="pConnectionStackedWidget">
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="pWebKitPage">
+           <layout class="QGridLayout" name="gridLayout_5">
+            <item row="1" column="0">
+             <spacer name="verticalSpacerWebkit">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>358</width>
+                <height>362</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="0">
+             <widget class="QWidget" name="pWebkitSettingsDlg" native="true">
+              <layout class="QGridLayout" name="gridLayout_4">
+               <property name="margin">
+                <number>0</number>
+               </property>
+               <item row="0" column="0">
+                <layout class="QVBoxLayout" name="verticalLayout_5">
+                 <item>
+                  <widget class="QCheckBox" name="useJavaCheckBox">
+                   <property name="toolTip">
+                    <string>Check for enabling Java</string>
+                   </property>
+                   <property name="text">
+                    <string>Use Java</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="useNPAPICheckBox">
+                   <property name="toolTip">
+                    <string>Check for enabling plugins that conform to the Netscape Plugin API</string>
+                   </property>
+                   <property name="text">
+                    <string>Use NPAPI</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="usePrivateBrowsingCheckBox">
+                   <property name="toolTip">
+                    <string>Private browsing prevents WebKit from recording visited pages in the history and storing web page icons</string>
+                   </property>
+                   <property name="text">
+                    <string>Private browsing</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="downloadImagesCheckBox">
+                   <property name="toolTip">
+                    <string>Check for enabling images autodownload</string>
+                   </property>
+                   <property name="text">
+                    <string>Autodownload images</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="1" column="0">
+                <widget class="QGroupBox" name="enableJavascript">
+                 <property name="title">
+                  <string>Javascript</string>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_4">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>9</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>9</number>
+                  </property>
+                  <item>
+                   <widget class="QCheckBox" name="pShowAlertsCheckBox">
+                    <property name="text">
+                     <string>Show Alerts</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="jsAccessClipboardCheckBox">
+                    <property name="text">
+                     <string>Can Access Clipboard</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="pProxyPage">
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QGroupBox" name="proxySupport">
+              <property name="toolTip">
+               <string>Use proxy for HTTP-connection</string>
+              </property>
+              <property name="title">
+               <string>Enable Proxy</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_6">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_9">
+                 <property name="text">
+                  <string>Type:</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1" colspan="2">
+                <widget class="QComboBox" name="proxyType">
+                 <property name="toolTip">
+                  <string>Proxy's type</string>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>Socks5</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Http</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_13">
+                 <property name="text">
+                  <string>Host:</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1" colspan="2">
+                <widget class="QLineEdit" name="proxyHostName">
+                 <property name="toolTip">
+                  <string>Proxy's address:
+IP ( 192.168.0.1 ) or domain name ( someproxy.com )</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_14">
+                 <property name="text">
+                  <string>Port:</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QSpinBox" name="proxyPort">
+                 <property name="toolTip">
+                  <string>Proxy's port ( usually 80 or 8080 )</string>
+                 </property>
+                 <property name="maximum">
+                  <number>10000</number>
+                 </property>
+                 <property name="value">
+                  <number>1080</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="2">
+                <spacer name="horizontalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>293</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_15">
+                 <property name="text">
+                  <string>User Name:</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1" colspan="2">
+                <widget class="QLineEdit" name="proxyUserName">
+                 <property name="toolTip">
+                  <string>Usualy not required</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_16">
+                 <property name="text">
+                  <string>Password:</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1" colspan="2">
+                <widget class="QLineEdit" name="proxyPassword">
+                 <property name="toolTip">
+                  <string>Usualy not required</string>
+                 </property>
+                 <property name="echoMode">
+                  <enum>QLineEdit::Password</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacerProxy">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>8</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="pCachePage">
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <layout class="QFormLayout" name="formLayout_2">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>Storage:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <layout class="QHBoxLayout" name="horizontalLayout_3">
+                <item>
+                 <widget class="QLineEdit" name="pCacheDirLineEdit">
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QToolButton" name="pChangeCacheDirButton">
+                  <property name="toolTip">
+                   <string>Relocate cache storage directory</string>
+                  </property>
+                  <property name="text">
+                   <string>...</string>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>:/images/open.png</normaloff>:/images/open.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string>Limit:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QSpinBox" name="pCacheStorageSizeSpinbox">
+                <property name="toolTip">
+                 <string>Set maximum cache size</string>
+                </property>
+                <property name="suffix">
+                 <string> MiB</string>
+                </property>
+                <property name="minimum">
+                 <number>0</number>
+                </property>
+                <property name="maximum">
+                 <number>1024</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="verticalSpacerCache">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pEvenstPage">
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <property name="margin">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QSplitter" name="splitter">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QGroupBox" name="groupBox_4">
+           <property name="title">
+            <string>JavScript output</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_12">
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QTextBrowser" name="pJSTextBrowser"/>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pConnectionListWidget</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>pConnectionStackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>27</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>97</x>
+     <y>27</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pOptionsListWidget</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>pOptionsStackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>106</x>
+     <y>27</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>97</x>
+     <y>27</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pSitesListWidget</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>pSitesListStackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>142</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>148</x>
+     <y>157</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

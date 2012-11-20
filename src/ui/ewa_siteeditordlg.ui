@@ -1,0 +1,1333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EWASiteEditorDlgUi</class>
+ <widget class="QDialog" name="EWASiteEditorDlgUi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>495</width>
+    <height>334</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>5</horstretch>
+    <verstretch>5</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Site Options</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_9">
+   <property name="sizeConstraint">
+    <enum>QLayout::SetNoConstraint</enum>
+   </property>
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="pToolbarLayout"/>
+   </item>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>URL:</string>
+       </property>
+       <property name="buddy">
+        <cstring>urlLineEdit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="urlLineEdit">
+       <property name="toolTip">
+        <string>Current site's URL</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="downloadButton">
+       <property name="maximumSize">
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>Get page sourse code</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset resource="ewa.qrc">
+         <normaloff>:/images/play.png</normaloff>:/images/play.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0">
+    <widget class="QStackedWidget" name="pStackedWidgetModes">
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="Highlight">
+         <brush brushstyle="SolidPattern">
+          <color alpha="206">
+           <red>0</red>
+           <green>92</green>
+           <blue>162</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="HighlightedText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="Highlight">
+         <brush brushstyle="SolidPattern">
+          <color alpha="206">
+           <red>0</red>
+           <green>92</green>
+           <blue>162</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="HighlightedText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="Highlight">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>178</red>
+           <green>180</green>
+           <blue>191</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="HighlightedText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="pSimplePropertiesPage">
+      <layout class="QGridLayout" name="gridLayout_4">
+       <property name="margin">
+        <number>2</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="EWASimpleSiteProperties" name="m_pSimpleProperties" native="true"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pExtendedPropertiesPage">
+      <layout class="QGridLayout" name="gridLayout_10">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetNoConstraint</enum>
+       </property>
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QStackedWidget" name="pExtendedStackedWidget">
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="pWidgetSettingsPage">
+          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0">
+           <property name="spacing">
+            <number>2</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetNoConstraint</enum>
+           </property>
+           <property name="margin">
+            <number>2</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QListWidget" name="pExtendedSettingsListWidget">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="focusPolicy">
+                <enum>Qt::NoFocus</enum>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="currentRow">
+                <number>0</number>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Common</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="ewa.qrc">
+                  <normaloff>:/images/configure.png</normaloff>:/images/configure.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Widget</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="ewa.qrc">
+                  <normaloff>:/images/view.png</normaloff>:/images/view.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Web Page</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="ewa.qrc">
+                  <normaloff>:/images/web.png</normaloff>:/images/web.png</iconset>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QStackedWidget" name="stackedWidget">
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <widget class="QWidget" name="pGeneralMessageSettingsPage">
+                <layout class="QGridLayout" name="gridLayout_5">
+                 <property name="margin">
+                  <number>0</number>
+                 </property>
+                 <item row="0" column="0">
+                  <layout class="QVBoxLayout" name="verticalLayout">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_4"/>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="groupBox_2">
+                     <property name="title">
+                      <string>Message View</string>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_9">
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="msgSysRadioButton">
+                        <property name="toolTip">
+                         <string>Plain text baloon popup in System Tray</string>
+                        </property>
+                        <property name="text">
+                         <string>Text</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="msgSysExRadioButton">
+                        <property name="toolTip">
+                         <string>Interactive EWA's widget</string>
+                        </property>
+                        <property name="text">
+                         <string>Widget</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <layout class="QGridLayout" name="_5">
+                     <property name="spacing">
+                      <number>2</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_10">
+                       <property name="text">
+                        <string>Caption:</string>
+                       </property>
+                       <property name="buddy">
+                        <cstring>titleLineEdit</cstring>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLineEdit" name="titleLineEdit">
+                       <property name="contextMenuPolicy">
+                        <enum>Qt::DefaultContextMenu</enum>
+                       </property>
+                       <property name="text">
+                        <string>EWA [%url%]</string>
+                       </property>
+                       <property name="maxLength">
+                        <number>32</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_12">
+                       <property name="text">
+                        <string>Duration:</string>
+                       </property>
+                       <property name="buddy">
+                        <cstring>durationSpinBox</cstring>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QSpinBox" name="durationSpinBox">
+                       <property name="toolTip">
+                        <string>Message duration time 
+( 10-600 seconds )</string>
+                       </property>
+                       <property name="suffix">
+                        <string> s</string>
+                       </property>
+                       <property name="minimum">
+                        <number>10</number>
+                       </property>
+                       <property name="maximum">
+                        <number>600</number>
+                       </property>
+                       <property name="value">
+                        <number>15</number>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                 <item row="1" column="0">
+                  <spacer name="verticalSpacer_2">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="EWASysTrayMsgSettingsDlg" name="ewaSysTrayMsgSettings"/>
+               <widget class="EWASiteWidgetSettingsDlg" name="ewaXMsgSettings"/>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pAccessSettingsPage">
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <property name="spacing">
+            <number>2</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetNoConstraint</enum>
+           </property>
+           <property name="margin">
+            <number>2</number>
+           </property>
+           <item>
+            <widget class="QListWidget" name="pAccessSettingsListWidget">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="currentRow">
+              <number>0</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>Period</string>
+              </property>
+              <property name="icon">
+               <iconset resource="ewa.qrc">
+                <normaloff>:/images/period.png</normaloff>:/images/period.png</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Changes</string>
+              </property>
+              <property name="icon">
+               <iconset resource="ewa.qrc">
+                <normaloff>:/images/changes.png</normaloff>:/images/changes.png</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Mode</string>
+              </property>
+              <property name="icon">
+               <iconset resource="ewa.qrc">
+                <normaloff>:/images/mode.png</normaloff>:/images/mode.png</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>User Agent</string>
+              </property>
+              <property name="icon">
+               <iconset resource="ewa.qrc">
+                <normaloff>:/images/user-agent.png</normaloff>:/images/user-agent.png</iconset>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QStackedWidget" name="pAccessStackedWidget">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="pPeriodPage">
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <item>
+                <layout class="QFormLayout" name="formLayout">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_2">
+                   <property name="text">
+                    <string>Autocheck every:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <layout class="QHBoxLayout" name="horizontalLayout_7">
+                   <item>
+                    <widget class="QSpinBox" name="timeValueSpinBox">
+                     <property name="toolTip">
+                      <string>Download period ( units count )</string>
+                     </property>
+                     <property name="suffix">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="timeUnitsComboBox2">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="toolTip">
+                      <string>Download period ( units )</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>seconds</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>minutes</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>hours</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_7">
+                 <property name="text">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Here you can customize site access frequency.&lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;Notice:&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; The delay before automatic downloading is depend on Sites List's Download Type.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>91</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="pChangesPage">
+              <layout class="QGridLayout" name="gridLayout_7">
+               <property name="sizeConstraint">
+                <enum>QLayout::SetNoConstraint</enum>
+               </property>
+               <item row="0" column="0">
+                <widget class="QGroupBox" name="matchPopupGroupBox">
+                 <property name="toolTip">
+                  <string>Show policy
+Show message only if content ( not )changed</string>
+                 </property>
+                 <property name="title">
+                  <string>Track Changes</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_12">
+                  <property name="sizeConstraint">
+                   <enum>QLayout::SetNoConstraint</enum>
+                  </property>
+                  <item row="1" column="0">
+                   <widget class="QLabel" name="label_4">
+                    <property name="text">
+                     <string>Show popup if matched text:</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QComboBox" name="matchedComboBox">
+                    <item>
+                     <property name="text">
+                      <string>not changed</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>changed</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item row="2" column="0" colspan="2">
+                   <widget class="QGroupBox" name="groupBox">
+                    <property name="title">
+                     <string>RegExp</string>
+                    </property>
+                    <property name="flat">
+                     <bool>true</bool>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_13">
+                     <property name="sizeConstraint">
+                      <enum>QLayout::SetNoConstraint</enum>
+                     </property>
+                     <property name="margin">
+                      <number>2</number>
+                     </property>
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_3">
+                       <property name="text">
+                        <string>Pattern:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0" colspan="4">
+                      <layout class="QHBoxLayout" name="horizontalLayout_2">
+                       <property name="sizeConstraint">
+                        <enum>QLayout::SetNoConstraint</enum>
+                       </property>
+                       <item>
+                        <widget class="QCheckBox" name="minCheckBox">
+                         <property name="toolTip">
+                          <string>Enables or disables minimal matching</string>
+                         </property>
+                         <property name="text">
+                          <string>Minimal</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QCheckBox" name="csCheckBox">
+                         <property name="toolTip">
+                          <string>Regex Case Sensitivity</string>
+                         </property>
+                         <property name="text">
+                          <string>Case Sensetive</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item row="0" column="2">
+                      <widget class="QToolButton" name="addTrackingRegexpButton">
+                       <property name="text">
+                        <string>...</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="ewa.qrc">
+                         <normaloff>:/images/configure.png</normaloff>:/images/configure.png</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLineEdit" name="patternLineEdit">
+                       <property name="toolTip">
+                        <string>Regex body for tracking changes</string>
+                       </property>
+                       <property name="readOnly">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QPushButton" name="selectTargetButton">
+                    <property name="text">
+                     <string>Select target</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="ewa.qrc">
+                      <normaloff>:/images/select_target.png</normaloff>:/images/select_target.png</iconset>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QPushButton" name="pMarkerColorButton">
+                    <property name="text">
+                     <string>Marker Color</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="ewa.qrc">
+                      <normaloff>:/images/marker.png</normaloff>:/images/marker.png</iconset>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <spacer name="verticalSpacer_8">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="pModePage">
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_8">
+                 <item>
+                  <widget class="QRadioButton" name="replayStyleIsHttpButton">
+                   <property name="toolTip">
+                    <string>EWA will send HTTP packets from saved queue.
+It provide quick acces to most of web sites.
+If target web document is inaccessible - try 
+to select &quot;User's Activities&quot; mode.</string>
+                   </property>
+                   <property name="text">
+                    <string>HTTP</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout">
+                   <item>
+                    <widget class="QRadioButton" name="replayStyleIsNotHttpButton">
+                     <property name="toolTip">
+                      <string>EWA will try to reproduce your activities -
+mouse clicks and keyboard buttons pressings.
+It can be slowly than HTTP-mode, but it allow 
+you access to some services (like GMail). 
+Select &quot;User's Activities&quot; if target site 
+is inaccessible in HTTP-mode.</string>
+                     </property>
+                     <property name="text">
+                      <string>User's Activities</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="pEditGesturesButton">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="toolTip">
+                      <string>Customize activities' properties</string>
+                     </property>
+                     <property name="text">
+                      <string>...</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="ewa.qrc">
+                       <normaloff>:/images/configure.png</normaloff>:/images/configure.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_5">
+                 <property name="text">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;To access the target web document, EWA can send HTTP packets or reproduce mouse and keyboard activities. Usualy, sending HTTP packets is enough, but for some sites (like GMail) it's needed to replay gestures.&lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;Notice:&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; If target is result of simple navigation to the URL (without any forms submitting or hyper links navigation) - access mode does not matter.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="textInteractionFlags">
+                  <set>Qt::NoTextInteraction</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_7">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>194</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="pUAPage">
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <item>
+                <layout class="QFormLayout" name="formLayout_2">
+                 <property name="fieldGrowthPolicy">
+                  <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                 </property>
+                 <property name="rowWrapPolicy">
+                  <enum>QFormLayout::WrapLongRows</enum>
+                 </property>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_6">
+                   <property name="text">
+                    <string>User-Agent value:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="EWAUAComboBox" name="userAgentComboBox">
+                   <property name="toolTip">
+                    <string>Application identificator for HTTP-server.
+If view of target content is differ from it in your browser,
+you can try change EWA's identifier here.</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_8">
+                 <property name="text">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;Notice:&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; The determination of browser is usualy done not &quot;just for fun&quot;. If you really need to change EWA's HTTP-identifier, it will be good idea to use &lt;/span&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_web_browsers#WebKit-based_browsers&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline; color:#0000ff;&quot;&gt;WebKit-based&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; browser's User-Agent.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="openExternalLinks">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_6">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>154</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pParsingSettingsPage">
+          <layout class="QGridLayout" name="gridLayout_8">
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="0" rowspan="2">
+            <widget class="QListWidget" name="pParsingSettingsListWidget">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="currentRow">
+              <number>0</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>Source</string>
+              </property>
+              <property name="icon">
+               <iconset resource="ewa.qrc">
+                <normaloff>:/images/source.png</normaloff>:/images/source.png</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Rules</string>
+              </property>
+              <property name="icon">
+               <iconset resource="ewa.qrc">
+                <normaloff>:/images/rules.png</normaloff>:/images/rules.png</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Result</string>
+              </property>
+              <property name="icon">
+               <iconset resource="ewa.qrc">
+                <normaloff>:/images/result.png</normaloff>:/images/result.png</iconset>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QStackedWidget" name="stackedWidget_2">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="pSourcePage">
+              <layout class="QGridLayout" name="gridLayout">
+               <property name="margin">
+                <number>0</number>
+               </property>
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QPlainTextEdit" name="srcTextEdit">
+                 <property name="acceptDrops">
+                  <bool>false</bool>
+                 </property>
+                 <property name="toolTip">
+                  <string>Page's source text</string>
+                 </property>
+                 <property name="undoRedoEnabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="pRulesPage">
+              <layout class="QGridLayout" name="gridLayout_2">
+               <property name="margin">
+                <number>0</number>
+               </property>
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item row="0" column="0" rowspan="4">
+                <widget class="QScrollArea" name="scrollArea">
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="scrollAreaWidgetContents">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>67</width>
+                    <height>67</height>
+                   </rect>
+                  </property>
+                  <layout class="QGridLayout" name="_2">
+                   <property name="margin">
+                    <number>0</number>
+                   </property>
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item row="0" column="0">
+                    <widget class="QTableView" name="pRulesTableView">
+                     <property name="toolTip">
+                      <string>Parsing rules</string>
+                     </property>
+                     <property name="editTriggers">
+                      <set>QAbstractItemView::NoEditTriggers</set>
+                     </property>
+                     <property name="tabKeyNavigation">
+                      <bool>false</bool>
+                     </property>
+                     <property name="showDropIndicator" stdset="0">
+                      <bool>false</bool>
+                     </property>
+                     <property name="alternatingRowColors">
+                      <bool>true</bool>
+                     </property>
+                     <property name="selectionMode">
+                      <enum>QAbstractItemView::SingleSelection</enum>
+                     </property>
+                     <property name="selectionBehavior">
+                      <enum>QAbstractItemView::SelectRows</enum>
+                     </property>
+                     <property name="cornerButtonEnabled">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <layout class="QVBoxLayout" name="_3">
+                 <item>
+                  <widget class="QPushButton" name="addRuleButton">
+                   <property name="maximumSize">
+                    <size>
+                     <width>22</width>
+                     <height>22</height>
+                    </size>
+                   </property>
+                   <property name="toolTip">
+                    <string>Add rule</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="ewa.qrc">
+                     <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="delRuleButton">
+                   <property name="maximumSize">
+                    <size>
+                     <width>22</width>
+                     <height>22</height>
+                    </size>
+                   </property>
+                   <property name="toolTip">
+                    <string>Remove rule</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="ewa.qrc">
+                     <normaloff>:/images/remove.png</normaloff>:/images/remove.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="verticalSpacer_3">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+               <item row="1" column="1">
+                <widget class="QToolButton" name="runButton">
+                 <property name="maximumSize">
+                  <size>
+                   <width>22</width>
+                   <height>22</height>
+                  </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Apply rule to current source
+( do it before adding new rule )</string>
+                 </property>
+                 <property name="text">
+                  <string>...</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="ewa.qrc">
+                   <normaloff>:/images/eat.png</normaloff>:/images/eat.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <spacer name="verticalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="3" column="1">
+                <layout class="QVBoxLayout" name="_4">
+                 <item>
+                  <widget class="QPushButton" name="moveRuleUpButton">
+                   <property name="maximumSize">
+                    <size>
+                     <width>22</width>
+                     <height>22</height>
+                    </size>
+                   </property>
+                   <property name="toolTip">
+                    <string>Move rule up</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="ewa.qrc">
+                     <normaloff>:/images/arrow_up.png</normaloff>:/images/arrow_up.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="moveRuleDownButton">
+                   <property name="maximumSize">
+                    <size>
+                     <width>22</width>
+                     <height>22</height>
+                    </size>
+                   </property>
+                   <property name="toolTip">
+                    <string>Move rule down</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="ewa.qrc">
+                     <normaloff>:/images/arrow_down.png</normaloff>:/images/arrow_down.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="pResultPage">
+              <layout class="QGridLayout" name="gridLayout_3">
+               <property name="margin">
+                <number>0</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QTextBrowser" name="resulttBrowser">
+                 <property name="contextMenuPolicy">
+                  <enum>Qt::NoContextMenu</enum>
+                 </property>
+                 <property name="acceptDrops">
+                  <bool>false</bool>
+                 </property>
+                 <property name="openLinks">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="0" column="1" rowspan="3">
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="okButton">
+       <property name="toolTip">
+        <string>Save changes</string>
+       </property>
+       <property name="text">
+        <string>Ready</string>
+       </property>
+       <property name="icon">
+        <iconset resource="ewa.qrc">
+         <normaloff>:/images/accept.png</normaloff>:/images/accept.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pCancelButton">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+       <property name="icon">
+        <iconset resource="ewa.qrc">
+         <normaloff>:/images/close.png</normaloff>:/images/close.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pChangeDlgButton">
+       <property name="text">
+        <string>Expert</string>
+       </property>
+       <property name="icon">
+        <iconset resource="ewa.qrc">
+         <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>EWASysTrayMsgSettingsDlg</class>
+   <extends>QWidget</extends>
+   <header>ewa_sysmsgsettings.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>EWASiteWidgetSettingsDlg</class>
+   <extends>QWidget</extends>
+   <header>ewa_sitewidgetsettingsdlg.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>EWAUAComboBox</class>
+   <extends>QComboBox</extends>
+   <header>ewa_uacombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>EWASimpleSiteProperties</class>
+   <extends>QWidget</extends>
+   <header>ewa_simplesiteproperties.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="ewa.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pParsingSettingsListWidget</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>stackedWidget_2</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>77</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>109</x>
+     <y>62</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pAccessSettingsListWidget</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>pAccessStackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>96</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>107</x>
+     <y>75</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>replayStyleIsNotHttpButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pEditGesturesButton</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>129</x>
+     <y>60</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>149</x>
+     <y>60</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pCancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>EWASiteEditorDlgUi</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>435</x>
+     <y>312</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>454</x>
+     <y>326</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

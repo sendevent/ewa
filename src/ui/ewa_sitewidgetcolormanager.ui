@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EWASiteWidgetColorManagerUi</class>
+ <widget class="QWidget" name="EWASiteWidgetColorManagerUi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>331</width>
+    <height>40</height>
+   </rect>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Color:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="changeColorButton">
+       <property name="toolTip">
+        <string>Base color of popup message </string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Opacity:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="transparencySpinBox">
+       <property name="toolTip">
+        <string>Widget's opacity: 0...95%
+(nontrancparent to almost invisible)</string>
+       </property>
+       <property name="suffix">
+        <string>%</string>
+       </property>
+       <property name="prefix">
+        <string/>
+       </property>
+       <property name="maximum">
+        <number>95</number>
+       </property>
+       <property name="singleStep">
+        <number>5</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

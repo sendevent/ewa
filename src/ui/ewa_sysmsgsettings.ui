@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EWASysMsgSettingsUi</class>
+ <widget class="QWidget" name="EWASysMsgSettingsUi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>168</width>
+    <height>156</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>0</width>
+    <height>108</height>
+   </size>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <layout class="QGridLayout" name="_3">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_13">
+       <property name="text">
+        <string>Message type:</string>
+       </property>
+       <property name="buddy">
+        <cstring>typeComboBox</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="typeComboBox">
+       <property name="toolTip">
+        <string>Message icon</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="msgLengthGroupBox">
+     <property name="toolTip">
+      <string>Message text length limit.
+If length is more then specyficied,
+message will be splitted and next 
+part'll be shown after previouse clicked</string>
+     </property>
+     <property name="title">
+      <string>Limit length</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <layout class="QGridLayout" name="_4">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Symbols amount:</string>
+        </property>
+        <property name="buddy">
+         <cstring>charCountSpinBox</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSpinBox" name="charCountSpinBox">
+        <property name="toolTip">
+         <string>Maximum characters amount in message</string>
+        </property>
+        <property name="minimum">
+         <number>32</number>
+        </property>
+        <property name="maximum">
+         <number>256</number>
+        </property>
+        <property name="value">
+         <number>256</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QCheckBox" name="spacesCheckBox">
+        <property name="toolTip">
+         <string>Don't wrap words</string>
+        </property>
+        <property name="text">
+         <string>Use nearest space</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>41</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

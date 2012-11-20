@@ -1,0 +1,12 @@
+[General]
+File=Enhanced Web Assistant - Sites List
+Filev=1.2
+
+[Sites]
+1\sitefile=en.forismatic.com-0
+2\sitefile=en.forismatic.com-1
+3\sitefile=en.forismatic.com-2
+4\sitefile=ru.forismatic.com-0
+5\sitefile=ru.forismatic.com-1
+6\sitefile=ru.forismatic.com-2
+size=6
