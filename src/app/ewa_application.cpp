@@ -29,6 +29,7 @@
 #ifdef Q_OS_LINUX
     #include <pwd.h>
     #include <sys/utsname.h>
+    #include <unistd.h>
 #elif defined(Q_OS_WIN)
     #include <windows.h>
     #include "ewa_sitewidgetwindows.h"
@@ -322,7 +323,7 @@ void EWAApplication::installTranslator( const QString &name )
 	}
 	 ); //-- QT_WA
 #else
-	struct passwd* pwd = getpwuid( getuid() );
+    struct passwd* pwd = getpwuid( getuid() );
 	if( pwd )
 		m_qstrOSUserName = QString( pwd->pw_name );
 #endif //-- Q_OS_WIN

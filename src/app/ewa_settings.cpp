@@ -67,11 +67,16 @@ EWASettings::EWASettings( QObject *pParent )
     m_sDefaultIconFile = QString( QLatin1String( ":/images/ewa.png" ) );
     normolizeSlashesInPath( m_sDefaultIconFile );
 
-QString strIniName = "ewa.ini";
-#ifdef EWA_DBG    
-    strIniName = "ewad.ini";
-#endif
-    m_sIniFile = QString( getUserDataFolder() + "/" + strIniName );
+    static const QString strIniName( "ewa%1.ini" );
+
+    m_sIniFile = QString( getUserDataFolder() + "/" + strIniName.arg(
+                          #ifdef EWA_DBG
+                              "d"
+                          #else
+                              ""
+                          #endif
+                              ));
+    qDebug() << Q_FUNC_INFO << m_sIniFile;
     normolizeSlashesInPath( m_sIniFile );
 
     m_pGroupSites = new EWASitesTabSettingsGroup( this, "Sites" );

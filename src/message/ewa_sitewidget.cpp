@@ -329,7 +329,7 @@ void EWASiteWidget::showSexy()
     pFlagsDlg->show();
 #endif //-- PLAY_WITH_FLAGS    
 
-    if( m_bViewModeNormal )
+    if( isViewNormal() )
     {
         slotScrollTo( getCurrnetScrollPoint() );
     }
@@ -354,14 +354,14 @@ void EWASiteWidget::showSexy()
 
     m_iSecondsBeforClose = m_iTTLSecs;
     
-    if( EWAApplication::settings()->m_pGroupApp->useRichWM() && m_bViewModeNormal )
+    if( EWAApplication::settings()->m_pGroupApp->useRichWM() && isViewNormal() )
     {
         setBaseOpacity( getBaseOpacity() );
     }
     
     if( ( !m_bWasShown )
         &&
-        ( !isPreview() && m_bViewModeNormal ) )
+        ( !isPreview() && isViewNormal() ) )
     {
         if( EWAApplication::settings()->m_pGroupApp->useRichWM() )
         {
@@ -373,12 +373,12 @@ void EWASiteWidget::showSexy()
 	
 	show();
 	
-	if( eCurrentHideVewMode == EM_HVM_ALWAYS_ON_DESKTOP && m_bViewModeNormal)
+    if( eCurrentHideVewMode == EM_HVM_ALWAYS_ON_DESKTOP && isViewNormal())
 	{
 	    lower();
 	}
 	
-	if( !m_bViewModeNormal )
+    if( !isViewNormal() )
 	{   
 	    //-- we are here from SiteHandle - 
 	    //-- it seems that user-navigated-by-link page
@@ -601,7 +601,7 @@ void EWASiteWidget::mousePressEvent( QMouseEvent *event )
 
     if( event->buttons() == Qt::LeftButton )
     {
-        if( m_eUIState == UIS_MOVE && m_bViewModeNormal )
+        if( m_eUIState == UIS_MOVE && isViewNormal() )
         {
             QRect currentGeom = geometry();
             QPoint newPos = mapToGlobal( this->pos() );
@@ -731,7 +731,7 @@ void EWASiteWidget::enterEvent( QEvent *event )
     if( m_pScrollArea->widget() )
         m_pScrollArea->widget()->setFocus( Qt::MouseFocusReason );
     
-    if( !isPreview() && m_bViewModeNormal && amIRaisable() )
+    if( !isPreview() && isViewNormal() && amIRaisable() )
     {
         activateWindow();
         raise();
@@ -761,7 +761,7 @@ void EWASiteWidget::leaveEvent( QEvent *event )
 
     if( !m_pHideScrollsTimer->isActive() )
     {
-        if( m_bViewModeNormal && m_bWasShown )
+        if( isViewNormal() && m_bWasShown )
         {
             m_pHideScrollsTimer->start();
         }
@@ -901,7 +901,7 @@ void EWASiteWidget::slotHideScrollBars()
         m_pHideScrollsTimer->stop();
     }
 
-    if( !m_bViewModeNormal 
+    if( !isViewNormal()
     || isOnAddWizard() 
     || scrollsPolicyIs( Qt::ScrollBarAlwaysOff ) )
     {
@@ -932,7 +932,7 @@ void EWASiteWidget::slotSwitchOffQuickShowScrolls()
 
 void EWASiteWidget::slotCloserTicked()
 {
-    if( !isPreview() && !isOnAddWizard() && m_bViewModeNormal )
+    if( !isPreview() && !isOnAddWizard() && isViewNormal() )
     {
         --m_iSecondsBeforClose;
 
@@ -988,7 +988,7 @@ void EWASiteWidget::slotDecreaseOpacity()
     {
         if( isPreview() 
             || !isVisible() 
-            || !m_bViewModeNormal )
+            || !isViewNormal() )
         {
             stopOpacityChanges();
             return;
@@ -1084,7 +1084,7 @@ void EWASiteWidget::setAsPreview( bool preview )
 
     if( m_bImPreview )
     {
-        if( !m_bViewModeNormal )
+        if( !isViewNormal() )
         {
             setViewNormal();
         }
@@ -1266,7 +1266,7 @@ void EWASiteWidget::setViewMaximized()
         return;
     }
     
-    m_bViewModeNormal = false;
+
 
     m_prevRect = geometry();
 
@@ -1274,15 +1274,14 @@ void EWASiteWidget::setViewMaximized()
     m_prevWebPageSz = m_sitePtr->getWebPageBaseSize();
 
     setGeometry( EWAApplication::getScreenSize( geometry().center() ) );
-    qApp->processEvents();
-    
+//    qApp->processEvents();
+    m_bViewModeNormal = false;
     QSize szNew = scrollArea()->viewport()->size();
     
     if( m_bScrollsShown )
     {
-        int iDeltaX = m_prevWebPageSz.width() > szNew.width() ? vScroll()->width() : 0;
-        int iDeltaY = m_prevWebPageSz.height() > szNew.height() ? hScroll()->height() : 0;
-        QSize szDeltaScrolls( iDeltaX, iDeltaY );
+        const int iDeltaX = m_prevWebPageSz.width() > szNew.width() ? vScroll()->width() : 0;
+        const int iDeltaY = m_prevWebPageSz.height() > szNew.height() ? hScroll()->height() : 0;
         if( iDeltaX || iDeltaY )
         {
             szNew += QSize( iDeltaX, iDeltaY );
@@ -1320,7 +1319,7 @@ void EWASiteWidget::setViewNormal()
         return;
     }
 
-    if( !m_bViewModeNormal )
+    if( !isViewNormal() )
     {
         m_bViewModeNormal = true;
         bool bYesIsVisible = isVisible();
@@ -1398,7 +1397,7 @@ double EWASiteWidget::getBaseOpacity() const
 
 void EWASiteWidget::setBaseOpacity( const double transparency )
 {
-    if( EWAApplication::settings()->m_pGroupApp->useRichWM() 
+    if( EWAApplication::settings()->m_pGroupApp->useRichWM()
     && transparency >= .0
     && transparency <= 1.0
     && getBaseOpacity() != transparency )
@@ -1466,7 +1465,7 @@ void EWASiteWidget::paintEvent( QPaintEvent *event )
 	updateSizeGripGeometry();
 	updateStatusBarGeometry();
 
-    if( m_bViewModeNormal )
+    if( isViewNormal() )
     {
         if( !EWAApplication::settings()->m_pGroupApp->useRichWM() )
         {
@@ -1495,7 +1494,7 @@ void EWASiteWidget::paintEvent( QPaintEvent *event )
 
  void EWASiteWidget::moveEvent( QMoveEvent *event )
 {
-    if( m_bViewModeNormal )
+    if( isViewNormal() )
     {
         QWidget::moveEvent( event );
         
