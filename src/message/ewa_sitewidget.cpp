@@ -1266,15 +1266,12 @@ void EWASiteWidget::setViewMaximized()
         return;
     }
     
-
-
     m_prevRect = geometry();
 
     m_prevScroll = m_ptCurrScroll;//m_qpntBaseScoll;
     m_prevWebPageSz = m_sitePtr->getWebPageBaseSize();
 
     setGeometry( EWAApplication::getScreenSize( geometry().center() ) );
-//    qApp->processEvents();
     m_bViewModeNormal = false;
     QSize szNew = scrollArea()->viewport()->size();
     

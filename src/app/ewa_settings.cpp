@@ -76,7 +76,7 @@ EWASettings::EWASettings( QObject *pParent )
                               ""
                           #endif
                               ));
-    qDebug() << Q_FUNC_INFO << m_sIniFile;
+
     normolizeSlashesInPath( m_sIniFile );
 
     m_pGroupSites = new EWASitesTabSettingsGroup( this, "Sites" );
