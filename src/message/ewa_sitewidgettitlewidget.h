@@ -8,7 +8,7 @@
 ** Widget which handle space for EWASiteWidgetLabel and controll buttons.
 ** 01.07.2009
 **
-** ewauthor@indatray.com
+** sendevent@gmail.com
 **
 *******************************************************************************/
 

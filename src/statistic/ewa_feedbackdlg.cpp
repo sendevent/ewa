@@ -9,7 +9,7 @@
 **
 ** 05.11.2009
 **
-** ewauthor@indatray.com
+** sendevent@gmail.com
 **
 *******************************************************************************/
 
@@ -35,7 +35,7 @@ EWAFeedbackDialog::EWAFeedbackDialog( QWidget *pParent )
         this, SLOT( slotRequestFinished(QNetworkReply*) ) );
     connect( ui.pCloseButton, SIGNAL( clicked() ),
         this, SLOT( close() ) );
-    m_errorMsg = tr( "Message not accepted.<br>You can use e-mail:<br><a href=\"mailto:feedback@indatray.com\">feedback@indatray.com</a>" );
+    m_errorMsg = tr( "Message not accepted.<br>You can use e-mail:<br><a href=\"mailto:sendevent@gmail.com\">sendevent@gmail.com</a>" );
 }
 
 EWAFeedbackDialog::~EWAFeedbackDialog(void)
@@ -156,7 +156,7 @@ void EWAFeedbackDialog::send()
     QString strSubj = ui.pSubjComboBox->currentText();
     QString strMsg = ui.pTextEdit->toPlainText();
     
-    QByteArray baData = "recipient=contact%40indatray.com&email="
+    QByteArray baData = "recipient=sendevent%40gmail.com&email="
         + QUrl::toPercentEncoding( strFrom )
         + "&subject="
         + QUrl::toPercentEncoding( strSubj )

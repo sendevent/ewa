@@ -9,7 +9,7 @@
 **
 ** 09.02.2009
 **
-** ewauthor@indatray.com
+** sendevent@gmail.com
 **
 *******************************************************************************/
 
@@ -35,7 +35,7 @@ class EWASitesListManager;
 class QAction;
 class EWASiteWidget;
 class EWAAboutDialog;
-class EWAUpdatesChecker;
+//class EWAUpdatesChecker;
 class EWAFaderWidget;
 
 class EWAMainWindow : public QMainWindow
@@ -125,7 +125,7 @@ class EWAMainWindow : public QMainWindow
         
         QString m_qstrTopToolbarActionsTooltipTemplate;
         
-        EWAUpdatesChecker *m_pUpdatesChecker;
+//        EWAUpdatesChecker *m_pUpdatesChecker;
         
         EWASitesListManager *m_sitesManagerPtr;
         

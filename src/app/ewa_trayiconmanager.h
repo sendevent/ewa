@@ -10,7 +10,7 @@
 **
 ** 09.02.2009
 **
-** ewauthor@indatray.com
+** sendevent@gmail.com
 **
 *******************************************************************************/
 #ifndef EWA_TRAYICONMANAGER_H

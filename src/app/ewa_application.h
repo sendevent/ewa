@@ -10,7 +10,7 @@
 **
 ** 09.02.2009
 **
-** ewauthor@indatray.com
+** sendevent@gmail.com
 **
 *******************************************************************************/
 
@@ -37,7 +37,7 @@ class EWASitesListManager;
 class EWAMainWindow;
 class EWATrayIconManager;
 class EWATimer;
-class EwaBuzzer;
+//class EwaBuzzer;
 class EWASplashScreen;
 class EWAUserActionsPlayer;
 class EWASiteThumbnailFileSystem;
@@ -155,7 +155,7 @@ class EWAApplication : public QApplication
         static void ungetUserActionsReplayerIndex( EWAUserActionsPlayer *pPlayer );
         
     private:
-        EwaBuzzer *m_pHomeBuzzer;
+//        EwaBuzzer *m_pHomeBuzzer;
         static QTranslator *m_pTranslator;
         static QList<EWAUserActionsPlayer*> *s_pGesturePlayers;
         

@@ -9,7 +9,7 @@
 **
 ** 14.10.2009
 **
-** ewauthor@indatray.com
+** sendevent@gmail.com
 **
 *******************************************************************************/
 #ifndef EWA_USERACTIONSPROCESSOR_H

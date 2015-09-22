@@ -9,7 +9,7 @@
 **
 ** 23.03.2009
 **
-** ewauthor@indatray.com
+** sendevent@gmail.com
 **
 *******************************************************************************/
 
@@ -368,7 +368,7 @@ void EWAWebPage::slotToolBarVisibilityChangeRequested( bool visible )
     qDebug() << "EWAWebPage::slotToolBarVisibilityChangeRequested():" << visible;
 }
 
-void EWAWebPage::slotDownloadRequested( const QNetworkRequest& request )
+void EWAWebPage::slotDownloadRequested( const QNetworkRequest& /*request*/ )
 {
     qDebug() << "EWAWebPage::slotDownloadRequested():";
 }

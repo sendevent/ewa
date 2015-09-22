@@ -9,7 +9,7 @@
 **
 ** 09.02.2009
 **
-** ewauthor@indatray.com
+** sendevent@gmail.com
 **
 *******************************************************************************/
 
@@ -69,7 +69,7 @@ EWAMainWindow::EWAMainWindow( QWidget *parent )
 
     slotSetSkin();
     
-    m_pUpdatesChecker = new EWAUpdatesChecker( this );
+//    m_pUpdatesChecker = new EWAUpdatesChecker( this );
 
     normalizeListviewsWidths();
 }
@@ -473,7 +473,7 @@ void EWAMainWindow::saveSettings()
     {
 		m_pStopAction->setChecked( true );
     }
-    m_pUpdatesChecker->stopChecking();
+//    m_pUpdatesChecker->stopChecking();
     
     //-- direct update mainwindow's geometry
     //-- in settings storage:
@@ -497,7 +497,7 @@ void EWAMainWindow::checkUpdatesDelayed( int delay )
 
 void EWAMainWindow::slotCheckForUpdates()
 {
-    m_pUpdatesChecker->setUsed( true );
+//    m_pUpdatesChecker->setUsed( true );
 }
 
 int EWAMainWindow::versionToInt( const QString& strVer ) const
@@ -577,7 +577,7 @@ void EWAMainWindow::slotStartSitesDownloading()
     }
 }
 
-void EWAMainWindow::slotSetSkin( const QString& fn )
+void EWAMainWindow::slotSetSkin( const QString& /*fn*/ )
 {
     qApp->setStyleSheet( "QMessageBox {messagebox-text-interaction-flags: 5;}QToolTip {background-color: #005990;border-color: white;border-width: 1px;border-style: outset;padding: 3px;color: #fefefe;border-radius: 3px;opacity: 210;}" );
 }
@@ -755,7 +755,7 @@ void EWAMainWindow::on_tooltipLineEdit_textChanged( const QString& )
 
 void EWAMainWindow::on_pUpdatesCheckBox_toggled( bool on )
 {
-    m_pUpdatesChecker->setUsed( on );
+//    m_pUpdatesChecker->setUsed( on );
 }
 
 void EWAMainWindow::getCurrentTubAndSubtab( int& iTab, int& iSubTab ) const

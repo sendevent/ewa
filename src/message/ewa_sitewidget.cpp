@@ -13,7 +13,7 @@
 **
 ** 23.03.2009
 **
-** ewauthor@indatray.com
+** sendevent@gmail.com
 **
 *******************************************************************************/
 
@@ -814,8 +814,8 @@ void EWASiteWidget::hideScrollBars()
 {
     setScrollsPolicy( Qt::ScrollBarAlwaysOff );
     
-    int iDeltaX = vScroll()->maximum() ? vScroll()->width() : 0;
-    int iDeltaY = hScroll()->maximum() ? hScroll()->height() : 0;
+//    int iDeltaX = vScroll()->maximum() ? vScroll()->width() : 0;
+//    int iDeltaY = hScroll()->maximum() ? hScroll()->height() : 0;
     
     hScroll()->hide();
     vScroll()->hide();

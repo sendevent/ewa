@@ -10,7 +10,7 @@
 **
 ** 09.02.2009
 **
-** ewauthor@indatray.com
+** sendevent@gmail.com
 **
 *******************************************************************************/
 
@@ -134,7 +134,7 @@ EWAApplication::EWAApplication( int &argc, char **argv )
     iniUniqueId();
     initAllowedImgFormats();
 
-    m_pHomeBuzzer = new EwaBuzzer();
+//    m_pHomeBuzzer = new EwaBuzzer();
 
     moveStuffFoldersToUserDir();
 
@@ -168,7 +168,7 @@ EWAApplication::~EWAApplication()
     delete m_pAppTimer;
     delete s_pTimerListeners;
 
-    delete m_pHomeBuzzer;
+//    delete m_pHomeBuzzer;
 }
 
 EWAApplication *EWAApplication::instance()
@@ -479,7 +479,7 @@ void EWAApplication::unregisterTimer( const EWATimer* pListener )
 
 int EWAApplication::exec()
 {
-    m_pHomeBuzzer->sayHelloHomeServer();
+//    m_pHomeBuzzer->sayHelloHomeServer();
     processEvents();
     return QApplication::exec();
 }
@@ -491,7 +491,7 @@ void EWAApplication::quit()
     
     getTrayIconManager()->hideTrayIcon();
 
-    m_pHomeBuzzer->sayGoodbayHomeServer();
+//    m_pHomeBuzzer->sayGoodbayHomeServer();
     
     processEvents();
     

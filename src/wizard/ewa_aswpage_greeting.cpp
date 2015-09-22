@@ -9,7 +9,7 @@
 **
 ** 09.02.2009
 **
-** ewauthor@indatray.com
+** sendevent@gmail.com
 **
 *******************************************************************************/
 #include "ewa_aswpage_greeting.h"

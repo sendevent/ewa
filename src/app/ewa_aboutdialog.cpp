@@ -9,7 +9,7 @@
 **
 ** 23.03.2009
 **
-** ewauthor@indatray.com
+** sendevent@gmail.com
 **
 *******************************************************************************/
 
@@ -28,6 +28,7 @@ EWAAboutDialog::EWAAboutDialog( QWidget *parent )
     :QDialog( parent )
 {
     ui.setupUi( this );
+    ui.debitsButton->hide();
     setWindowFlags( Qt::WindowType_Mask|Qt::WindowStaysOnTopHint );
 
     int width = calcWidth();
@@ -297,15 +298,15 @@ const QString EWAAboutDialog::getAboutDefaultText() const
             "%Enhanced Web Assistant v.%2"
             "%(builded at %3; Qt %5)"
             "%"
-            "%helps to:"
-            "%    automize sites loading;"
-            "%    fast detect content's changes;"
-            "%    view only the interesting data through"
+            "%allows:"
+            "%    scheduled access to webistes;"
+            "%    automatic content changes detection;"
+            "%    acces only the specified data with"
             "%      desktop widget/system baloon;"
             "%    hinder access to your information for observers."
             "%"
-            "%(c) ewauthor, Saint-Petersburg, 2009-2010."
-            "%mailto: contact@indatray.com"
+            "%(c) sendevent, Saint-Petersburg, 2009-2015."
+            "%mailto: sendevent@gmail.com"
             )
             .arg( getCommandMarkText( 0 ) )
             .arg( EWAApplication::getCurrentVersionWithHash() )
@@ -319,7 +320,6 @@ const QString EWAAboutDialog::getAboutCreditsText() const
      QString strOriginal = tr( 
         "%1"
         "%Thanks to %2 for using EWA."
-        "%Thanks to designer@indatray.com for nice icon set."
         "%Thanks to Trolltech (Nokia) for Qt."
         )
         .arg( getCommandMarkText( 1 ) )
@@ -358,14 +358,13 @@ void EWAAboutDialog::slotShowContextMenu( const QPoint& pt )
 
     if( ui.creditsButton->isChecked() )
     {
-        context->addAction( tr( "designer@indatray.com" ) );
         context->addAction( tr( "http://qt.nokia.com/" ) );
     }
     else
     {
         context->addAction( QString( "EWA %1" ).arg( EWAApplication::getCurrentVersionWithHash() ) );
         context->addAction( tr( "http://qt.nokia.com/" ) );
-        context->addAction( tr( "contact@indatray.com" ) );
+        context->addAction( tr( "sendevent@gmail.com" ) );
     }
 
     QAction *selectedAction = context->exec( ui.textEdit->mapToGlobal( pt ) );
@@ -387,9 +386,9 @@ void EWAAboutDialog::slotShowFeedbackForm()
 {
     close();
 
-    EWAFeedbackDialog *pDlg = new EWAFeedbackDialog();
-    pDlg->setAttribute( Qt::WA_DeleteOnClose );
-    pDlg->show();
+//    EWAFeedbackDialog *pDlg = new EWAFeedbackDialog();
+//    pDlg->setAttribute( Qt::WA_DeleteOnClose );
+//    pDlg->show();
 }
 
 void EWAAboutDialog::changeEvent( QEvent * event )
